@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
+using System.Net;
 using System.Web.Mvc;
 using Ban_ve_xe.Models;
 using Ban_ve_xe.Common;
@@ -17,6 +19,7 @@ namespace Ban_ve_xe.Controllers
         [HttpGet]
         public ActionResult Index()
         {
+          
             return View();
         }
 
@@ -58,7 +61,9 @@ namespace Ban_ve_xe.Controllers
 
         public ActionResult Register()
         {
+           
             return View();
+
         }
 
         [HttpPost]
@@ -84,7 +89,29 @@ namespace Ban_ve_xe.Controllers
 
             return View();
         }
+        public ActionResult Create()
+        {
+            ViewBag.MaPhongBan = new SelectList(db.PhongBans, "MaPhongBan", "TenPhongBan");
+            return View();
+        }
 
+        // POST: NhanVienVanPhongs/Create
+        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
+        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create([Bind(Include = "ID,HoTen,NgaySinh,GioiTinh,DiaChi,DienThoai,SoCMTND,BangCap,TaiKhoan,MatKhau,AnhCaNhan,MaPhongBan")] NhanVienVanPhong nhanVienVanPhong)
+        {
+            if (ModelState.IsValid)
+            {
+                db.NhanVienVanPhongs.Add(nhanVienVanPhong);
+                db.SaveChangesAsync();
+                return RedirectToAction("Index");
+            }
+
+            ViewBag.MaPhongBan = new SelectList(db.PhongBans, "MaPhongBan", "TenPhongBan", nhanVienVanPhong.MaPhongBan);
+            return View(nhanVienVanPhong);
+        }
 
     }
 }
