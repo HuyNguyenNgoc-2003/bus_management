@@ -137,6 +137,7 @@
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\OfficerController.cs" />
     <Compile Include="Controllers\ProfileController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -201,6 +202,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\Database1.mdf" />
+    <Content Include="App_Data\Database1_log.ldf">
+      <DependentUpon>Database1.mdf</DependentUpon>
+    </Content>
     <Content Include="Assets\build\css\custom.css" />
     <Content Include="Assets\build\css\custom.min.css" />
     <Content Include="Assets\build\js\custom.js" />
@@ -3422,7 +3427,79 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="Content\jquery.googlemap.js" />
+    <Content Include="Data\files\05242b5b73b29decc4a3.jpg" />
+    <Content Include="Data\files\abra.jpg" />
+    <Content Include="Data\files\alakazam.jpg" />
+    <Content Include="Data\files\arbok.jpg" />
+    <Content Include="Data\files\arcanine.jpg" />
+    <Content Include="Data\files\beedrill.jpg" />
+    <Content Include="Data\files\bellsprout.jpg" />
+    <Content Include="Data\files\blastoise.jpg" />
+    <Content Include="Data\files\bulbasaur.jpg" />
+    <Content Include="Data\files\butterfree.jpg" />
+    <Content Include="Data\files\caterpie.jpg" />
+    <Content Include="Data\files\charizard.jpg" />
+    <Content Include="Data\files\charmander.jpg" />
+    <Content Include="Data\files\charmeleon.jpg" />
+    <Content Include="Data\files\clefable.jpg" />
+    <Content Include="Data\files\clefairy.jpg" />
+    <Content Include="Data\files\diglett.jpg" />
+    <Content Include="Data\files\dugtrio.jpg" />
+    <Content Include="Data\files\ekans.jpg" />
+    <Content Include="Data\files\fearow.jpg" />
+    <Content Include="Data\files\gloom.jpg" />
+    <Content Include="Data\files\golbat.jpg" />
+    <Content Include="Data\files\golduck.jpg" />
+    <Content Include="Data\files\growlithe.jpg" />
+    <Content Include="Data\files\ivysaur.jpg" />
+    <Content Include="Data\files\jigglypuff.jpg" />
+    <Content Include="Data\files\kadabra.jpg" />
+    <Content Include="Data\files\kakuna.jpg" />
+    <Content Include="Data\files\machamp.jpg" />
+    <Content Include="Data\files\machoke.jpg" />
+    <Content Include="Data\files\machop.jpg" />
+    <Content Include="Data\files\mankey.jpg" />
+    <Content Include="Data\files\meowth.jpg" />
+    <Content Include="Data\files\metapod.jpg" />
+    <Content Include="Data\files\nidoking.jpg" />
+    <Content Include="Data\_thumbs\Files\05242b5b73b29decc4a3.jpg" />
+    <Content Include="Data\_thumbs\Files\abra.jpg" />
+    <Content Include="Data\_thumbs\Files\alakazam.jpg" />
+    <Content Include="Data\_thumbs\Files\arbok.jpg" />
+    <Content Include="Data\_thumbs\Files\arcanine.jpg" />
+    <Content Include="Data\_thumbs\Files\beedrill.jpg" />
+    <Content Include="Data\_thumbs\Files\bellsprout.jpg" />
+    <Content Include="Data\_thumbs\Files\blastoise.jpg" />
+    <Content Include="Data\_thumbs\Files\bulbasaur.jpg" />
+    <Content Include="Data\_thumbs\Files\butterfree.jpg" />
+    <Content Include="Data\_thumbs\Files\caterpie.jpg" />
+    <Content Include="Data\_thumbs\Files\charizard.jpg" />
+    <Content Include="Data\_thumbs\Files\charmander.jpg" />
+    <Content Include="Data\_thumbs\Files\charmeleon.jpg" />
+    <Content Include="Data\_thumbs\Files\clefable.jpg" />
+    <Content Include="Data\_thumbs\Files\clefairy.jpg" />
+    <Content Include="Data\_thumbs\Files\diglett.jpg" />
+    <Content Include="Data\_thumbs\Files\dugtrio.jpg" />
+    <Content Include="Data\_thumbs\Files\ekans.jpg" />
+    <Content Include="Data\_thumbs\Files\fearow.jpg" />
+    <Content Include="Data\_thumbs\Files\gloom.jpg" />
+    <Content Include="Data\_thumbs\Files\golbat.jpg" />
+    <Content Include="Data\_thumbs\Files\golduck.jpg" />
+    <Content Include="Data\_thumbs\Files\growlithe.jpg" />
+    <Content Include="Data\_thumbs\Files\ivysaur.jpg" />
+    <Content Include="Data\_thumbs\Files\jigglypuff.jpg" />
+    <Content Include="Data\_thumbs\Files\kadabra.jpg" />
+    <Content Include="Data\_thumbs\Files\kakuna.jpg" />
+    <Content Include="Data\_thumbs\Files\machamp.jpg" />
+    <Content Include="Data\_thumbs\Files\machoke.jpg" />
+    <Content Include="Data\_thumbs\Files\machop.jpg" />
+    <Content Include="Data\_thumbs\Files\mankey.jpg" />
+    <Content Include="Data\_thumbs\Files\meowth.jpg" />
+    <Content Include="Data\_thumbs\Files\metapod.jpg" />
+    <Content Include="Data\_thumbs\Files\nidoking.jpg" />
     <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Models\Model.Context.tt">
@@ -3448,6 +3525,10 @@
     <Content Include="Models\Model.edmx.diagram">
       <DependentUpon>Model.edmx</DependentUpon>
     </Content>
+    <Content Include="libman.json" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Assets\ckfinder\plugins\fileeditor\codemirror\LICENSE" />
     <Content Include="Assets\ckfinder\skins\bootstrap\assets\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Assets\ckfinder\skins\bootstrap\assets\fonts\glyphicons-halflings-regular.ttf" />
@@ -4275,7 +4356,6 @@
     <Content Include="Assets\vendors\validator\.gitignore" />
     <Content Include="Assets\vendors\validator\README.md" />
     <Content Include="Assets\vendors\validator\validator.jquery.json" />
-    <Content Include="libman.json" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -4307,9 +4387,14 @@
     <Content Include="Views\Profile\EditPassword.cshtml" />
     <Content Include="Views\Profile\Index.cshtml" />
     <Content Include="Views\Login\Create.cshtml" />
+    <Content Include="Views\Officer\Create.cshtml" />
+    <Content Include="Views\Officer\Edit.cshtml" />
+    <Content Include="Views\Officer\Index.cshtml" />
+    <Content Include="Views\Officer\Print.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
+    <Folder Include="Data\flash\" />
+    <Folder Include="Data\images\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />

@@ -102,13 +102,32 @@ namespace Ban_ve_xe.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "ID,HoTen,NgaySinh,GioiTinh,DiaChi,DienThoai,SoCMTND,BangCap,TaiKhoan,MatKhau,AnhCaNhan,MaPhongBan")] NhanVienVanPhong nhanVienVanPhong)
         {
+            //if (ModelState.IsValid)
+            //{
+            //    db.NhanVienVanPhongs.Add(nhanVienVanPhong);
+            //    db.SaveChangesAsync();
+            //    return RedirectToAction("Index");
+            //}
+
             if (ModelState.IsValid)
             {
-                db.NhanVienVanPhongs.Add(nhanVienVanPhong);
-                db.SaveChangesAsync();
-                return RedirectToAction("Index");
+                string pw = Encryptor.MD5Hash(nhanVienVanPhong.MatKhau);
+                var check = db.NhanVienVanPhongs.Where(s => s.TaiKhoan == nhanVienVanPhong.TaiKhoan).FirstOrDefault();
+                if (check == null)
+                {
+                    nhanVienVanPhong.MatKhau = pw;
+                    db.Configuration.ValidateOnSaveEnabled = false;
+                    db.NhanVienVanPhongs.Add(nhanVienVanPhong);
+                    db.SaveChanges();
+                    return RedirectToAction("Index", "Login");
+                }
+                else
+                {
+                    ViewBag.ErrorRegister = "Tên tài khoản đã tồn tại";
+                }
             }
 
+          
             ViewBag.MaPhongBan = new SelectList(db.PhongBans, "MaPhongBan", "TenPhongBan", nhanVienVanPhong.MaPhongBan);
             return View(nhanVienVanPhong);
         }

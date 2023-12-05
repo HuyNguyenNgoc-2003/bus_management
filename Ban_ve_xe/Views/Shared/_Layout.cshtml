@@ -92,7 +92,8 @@
                                         case 1:
                                             {
                                                 <ul class="nav side-menu">
-                                                  
+
+                                                    <li>@Html.ActionLink("Tạo quyền", "Create", "Login", new { area = "" }, new { @class = "nav-link" })</li>
                                                     <li>@Html.ActionLink("Tạo tài khoản", "Register", "Login", new { area = "" }, new { @class = "nav-link" })</li>
                                                     <li>@Html.ActionLink("Trang chủ", "Index", "Home", new { area = "" }, new { @class = "nav-link" })</li>
                                                     <li><a href="/Officer/"><i class="fa fa-user-md"></i> Nhân viên văn phòng </a></li>

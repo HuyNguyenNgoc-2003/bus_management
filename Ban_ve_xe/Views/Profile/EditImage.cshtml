@@ -32,9 +32,15 @@
         <div class="form-group">
             <label class="control-label col-md-2">Chọn ảnh mới</label>
             <div class="col-md-10">
+
+
+
                 @Html.TextBoxFor(model => model.Img, new { @id = "Image", @name = "Image", @style = "width:225px;", @required = "true" })
                 <input value="Chọn ảnh" class="input-file uniform_on" id="fileInput" type="button" onclick="BrowseServer();" />
+               
                 @Html.ValidationMessageFor(model => model.Img)
+
+
             </div>
         </div>
 
