@@ -134,6 +134,7 @@
     <Compile Include="Common\CommonConstants.cs" />
     <Compile Include="Common\Encryptor.cs" />
     <Compile Include="Common\Login.cs" />
+    <Compile Include="Controllers\AssistantController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\DriverController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -4396,6 +4397,10 @@
     <Content Include="Views\Driver\Edit.cshtml" />
     <Content Include="Views\Driver\Index.cshtml" />
     <Content Include="Views\Driver\Print.cshtml" />
+    <Content Include="Views\Assistant\Create.cshtml" />
+    <Content Include="Views\Assistant\Edit.cshtml" />
+    <Content Include="Views\Assistant\Index.cshtml" />
+    <Content Include="Views\Assistant\Print.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Data\flash\" />
