@@ -135,6 +135,7 @@
     <Compile Include="Common\Encryptor.cs" />
     <Compile Include="Common\Login.cs" />
     <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\DriverController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\OfficerController.cs" />
@@ -4391,10 +4392,15 @@
     <Content Include="Views\Officer\Edit.cshtml" />
     <Content Include="Views\Officer\Index.cshtml" />
     <Content Include="Views\Officer\Print.cshtml" />
+    <Content Include="Views\Driver\Create.cshtml" />
+    <Content Include="Views\Driver\Edit.cshtml" />
+    <Content Include="Views\Driver\Index.cshtml" />
+    <Content Include="Views\Driver\Print.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Data\flash\" />
     <Folder Include="Data\images\" />
+    <Folder Include="Views\Base\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />

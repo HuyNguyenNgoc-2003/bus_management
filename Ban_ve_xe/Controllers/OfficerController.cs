@@ -49,7 +49,7 @@ namespace Ban_ve_xe.Controllers
         [HttpGet]
         public ActionResult Edit(int id)
         {
-            var dept = db.PhongBans.ToList();
+            var dept = db.PhongBans.ToList();//entity
             return View(db.NhanVienVanPhongs.SingleOrDefault(x => x.ID == id));
         }
 
