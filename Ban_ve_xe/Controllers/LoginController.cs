@@ -28,8 +28,8 @@ namespace Ban_ve_xe.Controllers
         public ActionResult Index(LoginModel model)
         {
             string pw = Encryptor.MD5Hash(model.Password);
-            var e = db.NhanVienVanPhongs.SingleOrDefault(x => x.TaiKhoan.Equals(model.Username) && x.MatKhau.Equals(pw));
-            //var e = db.NhanVienVanPhongs.SingleOrDefault(x => x.TaiKhoan.Equals(model.Username) && x.MatKhau.Equals(model.Password));
+            //var e = db.NhanVienVanPhongs.SingleOrDefault(x => x.TaiKhoan.Equals(model.Username) && x.MatKhau.Equals(pw));
+            var e = db.NhanVienVanPhongs.SingleOrDefault(x => x.TaiKhoan.Equals(model.Username) && x.MatKhau.Equals(model.Password));
             if (e != null)
             {
                 var user = db.NhanVienVanPhongs.SingleOrDefault(x => x.TaiKhoan.Equals(model.Username));

@@ -141,13 +141,18 @@
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\BusController.cs" />
     <Compile Include="Controllers\BusRouteController.cs" />
+    <Compile Include="Controllers\DepartmentController.cs" />
     <Compile Include="Controllers\DriverController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\MonthTicketController.cs" />
     <Compile Include="Controllers\OfficerController.cs" />
     <Compile Include="Controllers\ProfileController.cs" />
+    <Compile Include="Controllers\SellMonthTicketController.cs" />
     <Compile Include="Controllers\SellSingleTicketController.cs" />
     <Compile Include="Controllers\SingleTicketController.cs" />
+    <Compile Include="Controllers\StatisticController.cs" />
+    <Compile Include="Controllers\TicketOfficeController.cs" />
     <Compile Include="Controllers\TicketSellerController.cs" />
     <Compile Include="Controllers\TrafficController.cs" />
     <Compile Include="Global.asax.cs">
@@ -4438,6 +4443,23 @@
     <Content Include="Views\SellSingleTicket\Edit.cshtml" />
     <Content Include="Views\SellSingleTicket\Index.cshtml" />
     <Content Include="Views\SellSingleTicket\Print.cshtml" />
+    <Content Include="Views\MonthTicket\Create.cshtml" />
+    <Content Include="Views\MonthTicket\Edit.cshtml" />
+    <Content Include="Views\MonthTicket\Index.cshtml" />
+    <Content Include="Views\MonthTicket\Print.cshtml" />
+    <Content Include="Views\SellMonthTicket\Create.cshtml" />
+    <Content Include="Views\SellMonthTicket\Edit.cshtml" />
+    <Content Include="Views\SellMonthTicket\Index.cshtml" />
+    <Content Include="Views\SellMonthTicket\Print.cshtml" />
+    <Content Include="Views\TicketOffice\Create.cshtml" />
+    <Content Include="Views\TicketOffice\Edit.cshtml" />
+    <Content Include="Views\TicketOffice\Index.cshtml" />
+    <Content Include="Views\TicketOffice\Print.cshtml" />
+    <Content Include="Views\Statistic\Index.cshtml" />
+    <Content Include="Views\Statistic\Time.cshtml" />
+    <Content Include="Views\Department\Create.cshtml" />
+    <Content Include="Views\Department\Edit.cshtml" />
+    <Content Include="Views\Department\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Data\flash\" />

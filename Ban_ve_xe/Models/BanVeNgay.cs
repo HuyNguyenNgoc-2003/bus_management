@@ -15,7 +15,8 @@ namespace Ban_ve_xe.Models
     public partial class BanVeNgay
     {
         public int MaGiaoDich { get; set; }
-        public Nullable<System.DateTime> Ngay { get; set; }
+        //public Nullable<System.DateTime> Ngay { get; set; }
+        public DateTime Ngay { get; set; }
         public Nullable<int> MaPhuXe { get; set; }
         public Nullable<int> MaVeNgay { get; set; }
         public Nullable<int> SoVePhatRa { get; set; }
